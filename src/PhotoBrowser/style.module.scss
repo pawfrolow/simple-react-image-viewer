@@ -1,0 +1,127 @@
+.photo-browser-container {
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .inner-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .block {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        };
+        .hidden {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            background-size: 25%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100px;
+            height: 100px;
+            &:hover {
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
+        .fullscreen {
+            position: absolute;
+            top: 0;
+            right: 100px;
+            cursor: pointer;
+            background-size: 25%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100px;
+            height: 100px;
+            &:hover {
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
+        .download {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+            background-size: 25%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100px;
+            height: 100px;
+            &:hover {
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
+            .image {
+                max-height: 90%;
+                max-width: calc(100vw - 320px);
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+                opacity: 1;
+                cursor: pointer;
+            }
+        
+        .arrow {
+            position: absolute;
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 100px;
+            bottom: 100px;
+            cursor: pointer;
+            height: auto;
+            &:hover {
+                background-color: rgba(0,0,0,0.4);
+            }
+            .icon {
+                width: 25px;
+                height: 25px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            &.left {
+                left: 0;
+                transform: rotate(180deg);;
+            }
+            &.right {
+                right: 0;
+            }
+        }
+        .count {
+            position: absolute;
+            color: #fefefe;
+            bottom: 20px;
+            right: 30px;
+        }
+        .description {
+            position: absolute;
+            padding: 5px 10px;
+            background-color: rgba(0,0,0,0.3);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+            border-radius: 3px;
+            color: #ffffff;
+            bottom: 15px;
+            left: 50px;
+            margin-right: 100px;
+            text-align: justify;
+            max-height: 169px;
+            line-height: 20px;
+            overflow: hidden;
+        }
+    }
+}
